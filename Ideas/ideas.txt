@@ -17,4 +17,10 @@ documents
 Images
 chats
  
-Monetize- Tutor can sell services
+Monetize- Cram tutor can sell Services
+
+OnDemand
+1. Advertise - $5 - email notification to users/group mates
+2. Organize Cram session - $1 for 30 mins
+
+Subscribed users
