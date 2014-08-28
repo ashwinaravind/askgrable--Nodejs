@@ -25,6 +25,10 @@ handlers:
 - url: /
   static_files: public/contact.html
   upload: public/contact.html
+  
+- url: /
+  static_files: public/sendemail.html
+  upload: public/contact.html
 
 - url: /
   static_files: public/home.html
@@ -50,4 +54,11 @@ skip_files:
 - ^testrunner\.py
 - ^grunt\.js
 - ^node_modules/(.*/)?
+
+inbound_services:
+- mail
+
+- url: /_ah/mail/.+
+  script: handle_incoming_email.app
+  login: admin
 
