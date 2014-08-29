@@ -4,12 +4,19 @@ runtime: python27
 api_version: 1
 threadsafe: yes
 
+
+
+libraries:
+- name: jinja2
+  version: latest
+  
+  
 handlers:
 - url: /(.+)
   static_files: public/\1
   upload: public/(.*)
   
-
+  
 - url: /favicon\.ico
   static_files: favicon.ico
   upload: favicon\.ico
@@ -54,11 +61,4 @@ skip_files:
 - ^testrunner\.py
 - ^grunt\.js
 - ^node_modules/(.*/)?
-
-inbound_services:
-- mail
-
-- url: /_ah/mail/.+
-  script: handle_incoming_email.app
-  login: admin
 
